@@ -48,4 +48,32 @@ for ($i = 0; $i < count($match_schedule); $i++) {
     //var_dump($match);
     $match_results[] = $match;
 }
-var_dump($match_results);
+var_dump($match_results); 
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNAK-1</title>
+</head>
+<body>
+
+    <h2>Risultati partite</h2>
+    <?php for ($i = 0; $i < count($match_schedule); $i++) { ?>
+    <p>
+        <?php 
+        $single_match = $match_schedule[$i];
+        $home_team = $single_match['squadra_di_casa'];
+        $home_team_score = $single_match['punti_casa'];
+        $visiting_team = $single_match['squadra_ospite'];
+        $visiting_team_score = $single_match['punti_ospite'];
+        echo $match = $home_team . " - " . $visiting_team . " | " . $home_team_score . " - " . $visiting_team_score;
+        ?>
+    </p>
+    <?php } ?>
+
+</body>
+</html>
