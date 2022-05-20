@@ -28,20 +28,24 @@ $match_schedule = [
         "punti_ospite" => 81
     ],
 ];
+$match_results = [""];
 
-//var_dump($match_schedule);
+#var_dump($match_schedule);
 
-// ciclo l'array per selezionare i singoli valori
+# ciclo l'array per selezionare i singoli valori
 for ($i = 0; $i < count($match_schedule); $i++) {
-    // creo una variabile per salvare il singolo array contenuto
+    # creo una variabile per salvare il singolo array contenuto
     $single_match = $match_schedule[$i];
-    // salvo il nome della squadra di casa e il punteggio
+    # salvo il nome della squadra di casa e il punteggio
     $home_team = $single_match['squadra_di_casa'];
     $home_team_score = $single_match['punti_casa'];
-    // salvo il nome della squadra ospite e il punteggio
+    # salvo il nome della squadra ospite e il punteggio
     $visiting_team = $single_match['squadra_ospite'];
     $visiting_team_score = $single_match['punti_ospite'];
     //var_dump($home_team);
     //var_dump(array_search("squadra_di_casa", $single_match));
+    $match = $home_team . " - " . $visiting_team . " | " . $home_team_score . " - " . $visiting_team_score;
+    //var_dump($match);
+    $match_results[] = $match;
 }
-var_dump($home_team . " - " . $visiting_team . " | " . $home_team_score . " - " . $visiting_team_score);
+var_dump($match_results);
