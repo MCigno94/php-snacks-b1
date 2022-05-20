@@ -6,8 +6,8 @@ Creare un array con 15 numeri casuali, tenendo conto che l’array non dovrà co
  <?php
 
  $array_random_numbers = [];
-
- for ($i = 0; count($array_random_numbers) < 15; $i++ ) {
+ 
+ while (count($array_random_numbers) < 15) {
     $number = rand(1, 100);
     if (! in_array($number, $array_random_numbers)) {
         $array_random_numbers[] = $number;
