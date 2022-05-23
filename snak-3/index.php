@@ -68,8 +68,8 @@ foreach ($posts as $key => $value) {
         <h2> <?= $key; ?> </h2>
         <?php foreach ($value as $key => $post) : ?>
             <h4> <?= $post['title']; ?></h4>
-            <h4> <?= $post['author']; ?></h4>
-            <h4> <?= $post['text']; ?></h4>
+            <p> <?= $post['author']; ?></p>
+            <p> <?= $post['text']; ?></p>
         <?php endforeach; ?>
     <?php endforeach; ?>
 
