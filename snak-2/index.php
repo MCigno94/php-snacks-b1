@@ -12,10 +12,12 @@ $age = $_GET["age"];
 var_dump("nome: " . $name . "; mail: " . $mail . "; età: " . $age);
 var_dump(strlen($name));
 
-if (strlen($name) > 3 && strpos($mail, ".") && is_numeric($age)) {
+if (strlen($name) > 3 && strpos($mail, ".") && strpos($mail, "@") && is_numeric($age)) {
     var_dump("accesso verificato");
+    echo "<h2>Accesso Verificato</h2>";
 } else {
     var_dump("accesso negato");
+    echo "<h2>Accesso Negato</h2>";
 }
 ?>
 

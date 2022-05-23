@@ -28,7 +28,6 @@ $match_schedule = [
         "punti_ospite" => 81
     ],
 ];
-$match_results = [""];
 
 #var_dump($match_schedule);
 
@@ -46,7 +45,6 @@ for ($i = 0; $i < count($match_schedule); $i++) {
     //var_dump(array_search("squadra_di_casa", $single_match));
     $match = $home_team . " - " . $visiting_team . " | " . $home_team_score . " - " . $visiting_team_score;
     //var_dump($match);
-    $match_results[] = $match;
 }
 var_dump($match_results); 
 ?>
