@@ -68,27 +68,27 @@ foreach ($posts as $key => $value) {
 <body>
 
     <div class="container">
-        <div class="row">
-            <div class="cols">
-                <?php foreach ($posts as $key => $value) : ?>
-                <h2> <?= $key; ?> </h2>
-                <?php foreach ($value as $key => $post) : ?>
+        <?php foreach ($posts as $key => $value) : ?>
+        <h2> <?= $key; ?> </h2>
+        <div class="row row-cols-3 g-3">
+            <?php foreach ($value as $post) : ?>
+                <div class="cols">
                 <div class="card">
                     <img src="https://picsum.photos/200/300" alt="">
                     <div class="card-body">
                             <h4> <?= $post['title']; ?></h4>
                             <p> <?= $post['author']; ?></p>
                             <p> <?= $post['text']; ?></p>
-                            <?php endforeach; ?>
-                            <?php endforeach; ?>
-
+                            
+                        </div>
                     </div>
                 </div>
+                <!-- /.cols -->
+                <?php endforeach; ?>
             </div>
-            <!-- /.cols -->
+            <!-- /.row -->
+            <?php endforeach; ?>
         </div>
-        <!-- /.row -->
-    </div>
                 
 
 </body>
