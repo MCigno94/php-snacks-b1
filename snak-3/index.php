@@ -47,9 +47,9 @@ $posts = [
 ];
 
 foreach ($posts as $key => $value) {
-    var_dump($key);
+    //var_dump($key);
     foreach ($value as $key => $post) {
-        var_dump($post);
+        //var_dump($post);
     }
 }
 ?>
@@ -61,18 +61,35 @@ foreach ($posts as $key => $value) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SNAK-3</title>
+    
+    <!-- Bootstrap CSS v5.0.2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
 
-    <?php foreach ($posts as $key => $value) : ?>
-        <h2> <?= $key; ?> </h2>
-        <?php foreach ($value as $key => $post) : ?>
-            <h4> <?= $post['title']; ?></h4>
-            <p> <?= $post['author']; ?></p>
-            <p> <?= $post['text']; ?></p>
-        <?php endforeach; ?>
-    <?php endforeach; ?>
+    <div class="container">
+        <div class="row">
+            <div class="cols">
+                <?php foreach ($posts as $key => $value) : ?>
+                <h2> <?= $key; ?> </h2>
+                <?php foreach ($value as $key => $post) : ?>
+                <div class="card">
+                    <img src="https://picsum.photos/200/300" alt="">
+                    <div class="card-body">
+                            <h4> <?= $post['title']; ?></h4>
+                            <p> <?= $post['author']; ?></p>
+                            <p> <?= $post['text']; ?></p>
+                            <?php endforeach; ?>
+                            <?php endforeach; ?>
 
+                    </div>
+                </div>
+            </div>
+            <!-- /.cols -->
+        </div>
+        <!-- /.row -->
+    </div>
+                
 
 </body>
 </html>
