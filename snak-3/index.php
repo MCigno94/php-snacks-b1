@@ -79,7 +79,6 @@ foreach ($posts as $key => $value) {
                             <h4> <?= $post['title']; ?></h4>
                             <p> <?= $post['author']; ?></p>
                             <p> <?= $post['text']; ?></p>
-                            
                         </div>
                     </div>
                 </div>
